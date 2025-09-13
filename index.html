@@ -1,478 +1,826 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-  <script type="module" crossorigin src="/assets/index-CT_dmGhU.js"></script>
-  <link rel="stylesheet" crossorigin href="/assets/index-BP-H7n17.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" href="/path-to-font.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script> -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Mallanna&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+  <script
+    src="https://cdn.jsdelivr.net/npm/@splidejs/splide-extension-auto-scroll@0.5.3/dist/js/splide-extension-auto-scroll.min.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css" rel="stylesheet" />
+
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script> -->
 </head>
 
 <body>
- 
-    <div class="cursor-home">
-        <img src="/assets/cursor-BnZ3hOGP.png" alt="">
+
+  <!-- My Cart -->
+  <div class="cart-section-side" id="cart">
+    <div class="close-btn-cart" id="close-cart">Close</div>
+    <div class="heading-empty" id="empty-cart-message">
+      <h1>Empty Cart Shop Now</h1>
     </div>
-    <div class="cursor-sound">
-        <img src="/assets/cursor-2-4zpAddkg.png" alt="">
-    </div>
-    <div class="ledger-content">
-        <p class="first-section">01</p>
-        <p class="second-section">02</p>
-        <p class="third-section">03</p>
-        <p class="fourth-section">04</p>
-    </div>
-    <div id="splineCanvas">
-    <spline-viewer url="https://prod.spline.design/1zrSETC562BPMmE5/scene.splinecode"></spline-viewer>
+    <div class="cart-products-card" id="cart-products-container">
+      <div class="products-wrapper">
+        <!-- Cart items will be dynamically added here -->
+      </div>
+
+      <div class="shop-more">
+        SHOP MORE
+        <img src="./assets/images/shop more.svg" alt="">
+      </div>
     </div>
 
-    <div class="loading-screen">
-        <div class="para-loader">
-            
-            <div class="question">
-            <p class="no">NO</p>
-            <p class="yes">YES</p>
-        </div>
-        </div>
-        <div class="pre-loading-content">
-            <h3 id="shuffle">Loading</h3>
-            <p id="shuffle">wait until the page is fully loaded</p>
-        </div>
-        <div class="pre-loader-bar"></div>
+    <div class="sub-totals-product" id="cart-totals">
+      <div class="products-total-p">
+        <span>Products : </span>
+        <span id="products-total">0</span>
+      </div>
+      <div class="delivery-charges">
+        <span>Delivery Charges</span>
+        <span>250</span>
+      </div>
+      <div class="subtotal">
+        <span>Subtotal</span>
+        <span id="subtotal">250</span>
+      </div>
+      <div class="cta-check">
+        <div class="cta checkout">CHECK OUT</div>
+        <div class="del" id="clear-cart"><img src="./assets/images/del.svg" alt=""></div>
+      </div>
     </div>
-    <div class="hero-section">
-        <nav>
-            <div class="logo">
-<img src="/assets/logo-zu-lEby5.png" alt="">
-            </div>
-            <div class="nav-links">
-                <a class="Hover-shuffle">Home</a>
-                <a class="Hover-shuffle">About</a>
-                <a class="Hover-shuffle">Services</a>
-                <a class="Hover-shuffle">Work</a>
-                <div class="btn-contact">
-                    Lets talk
-                </div>
-                </div>
-             
-        </nav>
-        <div class="naav-2">
-            <div class="logo-2">
-                <img src="/assets/logo-zu-lEby5.png" alt="">
-            </div>
-            <div class="menu-open">
-                <p>Menu</p>
-            </div>
-        </div>
-<div class="circle-blob"></div>
-        <div class="hero-content">
-            <h4>JOIN US TO MAKE NEW <span class="video-h">
-                <video autoplay loop muted>
-                    <source src="/assets/bd75a61880cf6299a828ab02fcc89581-DOCRfRe1.mp4">
-                </video>
-            </span>WEBSITES DESIGN</h4>
-            <p>JOIN US TO MAKE NEW WEBSITES JOIN US TO MAKE NEW WEBSITES JOIN US TO MAKE NEW WEBSITES JOIN US TO MAKE NEW WEBSITES JOIN US TO MAKE NEW WEBSITES</p>
-            <div class="btn-explore">
-                Explore
-                <div class="arrow-circle">
-                    &#8594;
-                </div>
-            </div>
-            <div class="ledger-number">
-                <div class="cal-1"></div>
-                <div class="cal-1"></div>
-                <div class="cal-1"></div>
-            </div>
-        </div>
-        <div class="blob">
+  </div>
 
-        </div>
-        <div class="blob2">
+  <div class="cart-btn-float" id="open-cart">
 
-        </div>
-        
+    <img src="./assets/images/cart.svg" alt="">
+  </div>
+ <div class="slide-bar">
+    <div class="menu-2">
+      <a href="./index.html">HOME</a>
+      <a href="./About.html">About</a>
+      <a href="./contact.html">CONTACT</a>
     </div>
-
-    <audio id="mySound">
-        <source src="/assets/videoplayback%20(1)-BuACa_Qa.m4a" type="audio/mp3">
-    </audio>
-    <div class="block">
-    </div>
-    <div class="sidebar-menu-2">
-        <div class="sidebar-menu-content">
-           <div class="upper-menu">
-            <a href="#" class='Hover-shuffle' id="arrow-animate"><div class="num-side">01</div> Home</a>
-            <a href="#"  class='Hover-shuffle' id="arrow-animate"><div class="num-side">02</div> About </a>
-            <a href="#"  class='Hover-shuffle' id="arrow-animate"><div class="num-side">03</div> Services </a>
-            <a href="#"  class='Hover-shuffle' id="arrow-animate"><div class="num-side">04</div> Work </a>
-            <div class="btn-contact" id="btn-contact">
-                Lets talk
-            </div>
-           </div>
+    <div class="close-btn">CLOSE</div>
+    <div class="upper-picture-menu">
+      <div class="grid-box-container">
+        <div class="box" id="product-page">
+          <div class="elents"><img src="./assets/images/el-1.png" alt=""></div>
+          <div class="elents"><img src="./assets/images/marq-2.png" alt=""></div>
+          <div class="elents"><img src="./assets/images/el-2.png" alt=""></div>
+          <div class="name-box">DARK DESIRE</div>
+          <div class="choco-menu"><img src="./assets/images/Dark Desire Regular.png" alt=""></div>
         </div>
-    
-
+        <div class="box straw-bg" id="product-page">
+          <div class="elents"><img src="./assets/images/el-1.png" alt=""></div>
+          <div class="elents"><img src="./assets/images/marq-2.png" alt=""></div>
+          <div class="elents"><img src="./assets/images/el-2.png" alt=""></div>
+          <div class="name-box">STRAWBAE</div>
+          <div class="choco-menu"><img src="./assets/images/Strawbae Regular.png" alt=""></div>
+        </div>
+        <div class="box" id="product-page">
+          <div class="elents"><img src="./assets/images/el-3.png" alt=""></div>
+          <div class="elents"><img src="./assets/images/marq-1.png" alt=""></div>
+          <div class="elents"><img src="./assets/images/el-2.png" alt=""></div>
+          <div class="name-box">VANILLALUST</div>
+          <div class="choco-menu"><img src="./assets/images/Vanillust Regular.png" alt=""></div>
+        </div>
+        <div class="box" id="product-page">
+          <div class="elents"><img src="./assets/images/el-3.png" alt=""></div>
+          <div class="elents"><img src="./assets/images/marq-1.png" alt=""></div>
+          <div class="elents"><img src="./assets/images/el-2.png" alt=""></div>
+          <div class="name-box">BUNDLE</div>
+          <div class="choco-menu bundle-c"><img src="./assets/images/bundle.png" alt=""></div>
+        </div>
+      </div>
     </div>
-    <div class="marquee-section">
-        <div class="marquee">
-<div class="marque-content">
-    <h4>CODENART</h4>
-    <h4>CODENART</h4>
-    <h4>CODENART</h4>
-    <h4>CODENART</h4>
+  </div>
+
+
+  <!-- <div class="pre-loader-container">
+        <div class="hand-middle">
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="2037" height="541" viewBox="0 0 2037 541" fill="none">
+<g  class="right-hand" clip-path="url(#clip0_148_2)" >
+<rect x="589.252" y="61.3025" width="1468.58" height="939.058" transform="rotate(-16.4931 589.252 61.3025)" fill="url(#pattern0_148_2)"/>
+<rect x="2104.45" y="481.937" width="167.517" height="140.811" transform="rotate(-134.631 2104.45 481.937)" fill="url(#pattern1_148_2)" fill-opacity="0.4"/>
+<rect x="1539.43" y="304.644" width="133.814" height="112.586" transform="rotate(-134.631 1539.43 304.644)" fill="url(#pattern2_148_2)" fill-opacity="0.4"/>
+<rect x="1015.75" y="372.25" width="237.175" height="234.539" transform="rotate(-135.327 1015.75 372.25)" fill="url(#pattern3_148_2)"/>
+</g>
+<rect class="left-hand" y="11.3558" width="1015" height="424" transform="rotate(-0.641041 0 11.3558)" fill="url(#pattern4_148_2)"/>
+<defs>
+<pattern id="pattern0_148_2" patternContentUnits="objectBoundingBox" width="1" height="1">
+<use xlink:href="#image0_148_2" transform="scale(0.0017762 0.00277778)"/>
+</pattern>
+<pattern id="pattern1_148_2" patternContentUnits="objectBoundingBox" width="1" height="1">
+<use xlink:href="#image1_148_2" transform="matrix(0.00283286 0 0 0.003367 0 -1.11111)"/>
+</pattern>
+<pattern id="pattern2_148_2" patternContentUnits="objectBoundingBox" width="1" height="1">
+<use xlink:href="#image1_148_2" transform="matrix(0.00283286 0 0 0.003367 0 -1.11111)"/>
+</pattern>
+<pattern id="pattern3_148_2" patternContentUnits="objectBoundingBox" width="1" height="1">
+<use xlink:href="#image2_148_2" transform="scale(0.00555556 0.00561798)"/>
+</pattern>
+<pattern id="pattern4_148_2" patternContentUnits="objectBoundingBox" width="1" height="1">
+<use xlink:href="#image3_148_2" transform="matrix(0.000503018 0 0 0.00120492 0 -0.225951)"/>
+</pattern>
+<clipPath id="clip0_148_2">
+<rect width="1015" height="527" fill="white" transform="translate(1016 13.6537) rotate(-0.641041)"/>
+</clipPath>
+</defs>
+</svg>
+        </div>
+        <div class="number-loader">
+            <div class="bar-number-fill"></div>
+            <div class="numbr-loader">0%</div>
+        </div>
+         <div class="bg-left">
+          
+            <div class="content-left">
+                
+  Unlock your wildest fantasy and insane power  <span class="emojies">
+    <img src="./assets/images/emoji-1.png" alt="">
+  </span>
 </div>
-<div class="marque-content">
-    <h4>CODENART</h4>
-    <h4>CODENART</h4>
-    <h4>CODENART</h4>
-    <h4>CODENART</h4>
-</div>
         </div>
-    </div>
-<div class="about-section">
-    <div class="about-heading">
-        <div class="num-col">Phase 02</div>
-    </div>
-    <div class="blob-center">
+        <div class="bg-right">
+          
+           
+        </div>
        
+    </div>   -->
+  <nav>
+    <div class="since">since 2022</div>
+    <div class="line-bar"></div>
+    <div class="logo">
+      <img src="./assets/images/spl-removebg-preview 1.png" alt="">
+    </div>
+    <div class="line-bar"></div>
+    <div class="menu">MENU</div>
+  </nav>
+  <div class="hero-section">
+    <div class="content-hero-left">
+      <div class="heading">
+        FOR <span class="color-change">HARDER,</span> <br>
+        lONGER, <span class="bg-change">
+          <span class="word-container">
+            <span class="word">WILDER</span>
+          </span>
+        </span> SEX
+      </div>
+      <div class="para-hero">Chocolate that hits harder than your fantasies.
+        One bite. Endless nights.</div>
+      <div class="cta" id="product-page">Let’s Get Dirty</div>
+      <div class="slider-btn-section">
+        <div class="btn-s" data-flavor="strawbae" id="strawbae1">
+          <div class="choco-img"><img src="./assets/images/Strawbae Packs With Inner Mockups.png" alt=""></div>
+          <div class="bg-btn strwa-bg"></div>
+          <div class="text-btn">STRAWBA</div>
+        </div>
+        <div class="btn-s" data-flavor="darkdesire" id="darkdesire2">
+          <div class="choco-img"><img src="./assets/images/Dark Desire Pack with Inner.png" alt=""></div>
+          <div class="bg-btn choco-bg"></div>
+          <div class="text-btn">Dark Desire</div>
+        </div>
+        <div class="btn-s" data-flavor="vanilla" id="vanilla3">
+          <div class="choco-img"><img src="./assets/images/Vanillust Pack with Inner.png" alt=""></div>
+          <div class="bg-btn vanilla-bg "></div>
+          <div class="text-btn">Vanillalust</div>
+        </div>
+      </div>
     </div>
 
-    <div class="card-about-section">
-        <div class="cards">
-            <h4 id="shuffle-content">30%</h4>
-            <p >Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi dolor maxime </p>
-        </div>
-        <div class="cards" >
-            <h4 id="shuffle-content">20%</h4>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi dolor maxime </p>
-        </div>
-        <div class="cards">
-            <h4 id="shuffle-content">88%</h4>
-            <p >Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi dolor maxime </p>
-        </div>
+
+
+
+    <div class="slider-right-content">
+      <div class="bg-blob change-color"></div>
+      <div class="image-choco stawb-position">
+        <img src="./assets/images/Strawbae Packs With Inner Mockups.png" alt="">
+      </div>
+      <div class="image-choco dark-position">
+        <img src="./assets/images/Dark Desire Pack with Inner.png" alt="">
+      </div>
+      <div class="image-choco vanilla-position">
+        <img src="./assets/images/Vanillust Pack with Inner.png" alt="">
+      </div>
+      <div class="elements">
+        <div class="el-1"><img src="./assets/images/el-1.png" alt=""></div>
+        <div class="el-2"><img src="./assets/images/el-2.png" alt=""></div>
+        <div class="el-3"><img src="./assets/images/el-3.png" alt=""></div>
+        <div class="el-4"><img src="./assets/images/el-4.png" alt=""></div>
+      </div>
     </div>
-    <div class="para-about">
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore voluptatem, quae ad ea ut praesentium nesciunt in voluptatum deleniti incidunt quas, distinctio quia impedit porro sed nisi voluptates, asperiores reprehenderit.
-    </div>
-</div>
-<div class="video-section">
-    <div class="video-content">
-        <video autoplay loop muted>
-            <source src="/assets/WhatsApp%20Video%202024-11-04%20at%2016.59.44_34834936-C1rbCYa2.mp4">
-        </video>
-    </div>
-</div>
-<div class="work-section">
-    <div class="work-heading">
-        <div class="num-col phase-3">Phase 03</div>
-        <div class="work-heading-2">
-           <p>Lorem ipsum dolor sit amet consectetur adipisicing </p>
+    <div class="mobile-responsive-animation">
+      <div class="elements-hero-section">
+        <div class="element-m">
+          <img src="./assets/images/marq-1.png" alt="">
         </div>
+        <div class="element-m">
+          <img src="./assets/images/marq-2.png" alt="">
+        </div>
+        <div class="element-m">
+          <img src="./assets/images/marq-3.png" alt="">
+        </div>
+        <div class="element-m">
+          <img src="./assets/images/marq-1.png" alt="">
+        </div>
+      </div>
+      <div class="image-m-chocolate">
+        <div class="choco-m-1" id="choco-m-1">
+          <img src="./assets/images/Dark Desire Pack with Inner.png" alt="">
+        </div>
+        <div class="choco-m-1 choco-m-2" id="choco-m-2">
+          <img src="./assets/images/Vanillust Pack with Inner.png" alt="">
+        </div>
+        <div class="choco-m-1 choco-m-3" id="choco-m-3">
+          <img src="./assets/images/Strawbae Packs With Inner Mockups.png" alt="">
+        </div>
+      </div>
     </div>
-</div>
-<div class="work-gallery">
-    <div class="blob-work">
+  </div>
+  <div class="splide">
+    <div class="splide__track splide__track-2 ">
+      <ul class="splide__list">
+        <li class="splide__slide">Better than lube</li>
+
+        <li class="splide__slide"><img src="./assets/images/marq-2.png" alt=""></li>
+        <li class="splide__slide">Pre-cum in seconds</li>
+
+        <li class="splide__slide"><img src="./assets/images/marq-3.png" alt=""></li>
+        <li class="splide__slide">4+hrs of pounding</li>
+
+        <li class="splide__slide"><img src="./assets/images/marq-1.png" alt=""></li>
+      </ul>
+    </div>
+  </div>
+  <div class="about">
+    <div class="left-side-pic-ab">
+      <img src="./assets/images/Hand-Image-Mockup.jpg" alt="">
+    </div>
+    <div class="right-side-content-ab">
+      <h1>If It’s Not Loud Tonight, You Didn’t Eat Us Right.</h1>
+      <p>This isn’t just chocolate… it’s your new favorite sex toy 🍫🔞 Pop it, lick it, & get filthy for real. 💦</p>
+      <ul>
+        <li>😵‍💫🍫 Melts Panties, Not Just Stress </li>
+        <li>😴 No more “I’m tired” excuses </li>
+        <li>🛏️ Designed for Real-Life Lust </li>
+        <li>🍆🦍 Makes Him Thicker, Harder, Meaner </li>
+        <li>💦👅 Turns Her into a Slippery Problem </li>
+
+      </ul>
+      <div class="cta" id="product-page">Shop now and get dirty 💦 </div>
+    </div>
+
+  </div>
+  <div class="splide">
+    <div class="splide__track splide__track-3 ">
+      <ul class="splide__list">
+        <li class="splide__slide">All-natural, no crash</li>
+
+        <li class="splide__slide"><img src="./assets/images/marq-2.png" alt=""></li>
+        <li class="splide__slide"> Explodes inside out</li>
+
+        <li class="splide__slide"><img src="./assets/images/marq-3.png" alt=""></li>
+        <li class="splide__slide">She rides like possessed</li>
+
+        <li class="splide__slide"><img src="./assets/images/marq-1.png" alt=""></li>
+      </ul>
+    </div>
+  </div>
+  <div class="heading-review-main">NATURE'S NAUGHTIEST<br>RECIPE</div>
+  <div class="ingredients-section">
+    <div class="upper-section-ing">
+      <div class="right-side-circle-ing">
+        <div class="circle-ing">
+          <img src="./assets/images/ingredients.png" alt="">
+        </div>
+        <div class="center-choco">
+          <img src="./assets/images/Hubby-Chocolate-Mockup.png" alt="">
+        </div>
+      </div>
+      <div class="left-side-content-ing">
+        <div class="right-side-content-ab">
+          <h1 class="ing-h">HUSBAND EFFECTS </h1>
+          <span class="warning">⚠️ Explicit Warnings</span>
+          <p class="ing-p">🔥 Expect raging erections, torn condoms, and stamina that turns her into your personal
+            addict.
+            For husband ingredients benefits</p>
+          <ul>
+            <li>🍆 Rock-Hard Erections.</li>
+            <li>🦍 Unstoppable Stamina.</li>
+            <li>💦 Delayed Orgasm, Prolonged Timing.</li>
+            <li>😈 Stronger thrust power & rhythm.</li>
+            <li>🧠 Mentally sharp. Physically animal.</li>
+            <li>🧠 Confidence boost — no second-guessing in bed.</li>
+
+
+          </ul>
+          <div class="cta" id="product-page">Shop now and get dirty 💦 </div>
+        </div>
+      </div>
+    </div>
+    <div class="upper-section-ing">
+      <div class="right-side-circle-ing">
+        <div class="circle-ing">
+          <img src="./assets/images/ingredients.png" alt="">
+        </div>
+        <div class="center-choco">
+          <img src="./assets/images/Wife-Chocolate-Mockup.png" alt="">
+        </div>
+      </div>
+      <div class="left-side-content-ing">
+        <div class="right-side-content-ab">
+          <h1 class="ing-h">FOR WIFEY </h1>
+          <span class="warning">⚠️ Warning For Her</span>
+          <p class="ing-p">🔥 🔥 May cause uncontrollable moaning, uncontrollable wetness, nonstop orgasms.</p>
+          <ul>
+            <li>🌊 Extreme wetness.</li>
+            <li>⚡ Instant clit sensations.</li>
+            <li>🔁 3-5x deeper orgasms.</li>
+            <li>🔥 Faster arousal.</li>
+            <li>🍑 Tighter, hungrier, and louder.</li>
+            <li>😩 Increases craving</li>
+            <li>🧠 Switches off stress.
+            </li>
+
+          </ul>
+          <div class="cta" id="product-page">Shop now and get dirty 💦 </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <div class="splide">
+    <div class="splide__track splide__track-2 ">
+      <ul class="splide__list">
+        <li class="splide__slide">Mind blown, clit numb</li>
+
+        <li class="splide__slide"><img src="./assets/images/marq-2.png" alt=""></li>
+        <li class="splide__slide">No pills. Just madness.</li>
+
+        <li class="splide__slide"><img src="./assets/images/marq-3.png" alt=""></li>
+        <li class="splide__slide">Target: G-Spot locked</li>
+
+        <li class="splide__slide"><img src="./assets/images/marq-1.png" alt=""></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="product-slider-main">
+
+    <div class="arrow-slider">
+
+      <div class="left-slide"><img src="./assets/images/arrow-slider.png" alt=""></div>
+      <div class="right-slide"><img src="./assets/images/arrow-slider.png" alt=""></div>
+    </div>
+    <div class="container-slide">
+
+      <div class="slide-product">
+        <h1>DARKDESIRE</h1>
+
+      </div>
+      <div class="slide-product">
+        <h1>STRAWBAE</h1>
+      </div>
+      <div class="slide-product">
+        <h1>VANILLALUST</h1>
+      </div>
 
     </div>
-   
-<div class="work-col-1">
-    <div class="work-card">
-        <div class="work-img">
-            <img src="/assets/work-1-DpzdfPi-.png" alt="">
-        </div>
-        <div class="work-content-inner">
-            <p>  Lorem ipsum dolor </p>
-        </div>
-    </div>
-    <div class="work-card">
-        <div class="work-img">
-            <img src="/assets/work-1-DpzdfPi-.png" alt="">
-        </div>
-        <div class="work-content-inner">
-          <p>  Lorem ipsum dolor </p>
-        </div>
-    </div>
-</div>
-<div class="work-col-1">
-    <div class="work-card" id="work-card-1">
-        <div class="work-img">
-            <img src="/assets/work-1-DpzdfPi-.png" alt="">
-        </div>
-        <div class="work-content-inner">
-            <p>  Lorem ipsum dolor </p>
-        </div>
-    </div>
-    <div class="work-card " id="work-card-2">
-        <div class="work-img">
-            <img src="/assets/work-1-DpzdfPi-.png" alt="">
-        </div>
-        <div class="work-content-inner">
-          <p>  Lorem ipsum dolor </p>
-        </div>
-    </div>
-</div>
-<div class="work-col-1">
-    <div class="work-card">
-        <div class="work-img">
-            <img src="/assets/work-1-DpzdfPi-.png" alt="">
-        </div>
-        <div class="work-content-inner">
-            <p>  Lorem ipsum dolor </p>
-        </div>
-    </div>
-    <div class="work-card">
-        <div class="work-img">
-            <img src="/assets/work-1-DpzdfPi-.png" alt="">
-        </div>
 
-        <div class="work-content-inner">
-          <p>  Lorem ipsum dolor </p>
+    <div class="chocolate-slider-top-bottom">
+      <div class="container-vertical">
+        <div class="elements-slider-1">
+
+          <div class="ele-ing">
+            <img src="./assets/images/el-1.png" alt="">
+          </div>
+          <div class="ele-ing">
+            <img src="./assets/images/el-2.png" alt="">
+          </div>
+          <div class="ele-ing">
+            <img src="./assets/images/el-3.png" alt="">
+          </div>
+          <div class="ele-ing">
+            <img src="./assets/images/marq-1.png" alt="">
+          </div>
+          <div class="ele-ing">
+            <img src="./assets/images/marq-2.png" alt="">
+          </div>
         </div>
+        <div class="choco-main-lr position-lr">
+          <img src="./assets/images/Dark Desire Large.png" alt="">
+        </div>
+        <div class="choco-main-lr position-sm">
+          <img src="./assets/images/Dark Desire Regular.png" alt="">
+        </div>
+        <div class="btn-shop">
+          <div class="cta" id="product-page">Shop now 💦 </div>
+        </div>
+      </div>
+      <div class="container-vertical">
+        <div class="elements-slider-1">
+
+          <div class="ele-ing">
+            <img src="./assets/images/el-1.png" alt="">
+          </div>
+          <div class="ele-ing">
+            <img src="./assets/images/el-2.png" alt="">
+          </div>
+          <div class="ele-ing">
+            <img src="./assets/images/el-3.png" alt="">
+          </div>
+          <div class="ele-ing">
+            <img src="./assets/images/marq-1.png" alt="">
+          </div>
+          <div class="ele-ing">
+            <img src="./assets/images/marq-2.png" alt="">
+          </div>
+        </div>
+        <div class="choco-main-lr position-lr">
+          <img src="./assets/images/Strawbae Large.png" alt="">
+        </div>
+        <div class="choco-main-lr position-sm">
+          <img src="./assets/images/Strawbae Regular.png" alt="">
+        </div>
+        <div class="btn-shop">
+          <div class="cta pink" id="product-page">Shop now 💦 </div>
+        </div>
+      </div>
+      <div class="container-vertical">
+        <div class="elements-slider-1">
+
+          <div class="ele-ing">
+            <img src="./assets/images/el-1.png" alt="">
+          </div>
+          <div class="ele-ing">
+            <img src="./assets/images/el-2.png" alt="">
+          </div>
+          <div class="ele-ing">
+            <img src="./assets/images/el-3.png" alt="">
+          </div>
+          <div class="ele-ing">
+            <img src="./assets/images/marq-1.png" alt="">
+          </div>
+          <div class="ele-ing">
+            <img src="./assets/images/marq-2.png" alt="">
+          </div>
+        </div>
+        <div class="choco-main-lr position-lr">
+          <img src="./assets/images/Vanillust Large.png" alt="">
+        </div>
+        <div class="choco-main-lr position-sm">
+          <img src="./assets/images/Vanillust Regular.png" alt="">
+        </div>
+        <div class="btn-shop">
+          <div class="cta yellow" id="product-page">Shop now 💦 </div>
+        </div>
+      </div>
+
     </div>
-        
-   <div class="blob-work"></div>
+  </div>
+  <div class="splide">
+    <div class="splide__track splide__track-3 ">
+      <ul class="splide__list">
+        <li class="splide__slide">Blood flows, dick grows</li>
+
+        <li class="splide__slide"><img src="./assets/images/marq-2.png" alt=""></li>
+        <li class="splide__slide">Chocolate = Full-body cum</li>
+
+        <li class="splide__slide"><img src="./assets/images/marq-3.png" alt=""></li>
+        <li class="splide__slide"> She squirts on demand</li>
+
+        <li class="splide__slide"><img src="./assets/images/marq-1.png" alt=""></li>
+      </ul>
+    </div>
+  </div>
+  <div class="halal-section">
+    <div class="box-content">
+      <div class="icon"><img src="https://chocolatex.in/cdn/shop/files/Group_129_138x.png?v=1728386781" alt=""></div>
+      <h2>Indulge in Gameplay</h2>
+      <p>Enjoy a quick, hot, naughty card game to break the ice.</p>
+    </div>
+    <div class="box-content">
+      <div class="icon"><img src="https://chocolatex.in/cdn/shop/files/disguise_1_138x.png?v=1728386795" alt=""></div>
+      <h2>Discreet Delivery </h2>
+      <p>Psst, even your delivery guy won’t know. </p>
+    </div>
+    <div class="box-content">
+      <div class="icon"><img src="https://chocolatex.in/cdn/shop/files/Group_81_138x.png?v=1728386798" alt=""> </div>
+      <h2>100% Natural</h2>
+      <p>We’re darn serious about what we put into our chocolates, no nasties.</p>
+
+    </div>
+  </div>
+<div class="image-for-delivery">
+  <img class="des-d" src="./assets/images/discreet_1_2000x.webp" alt="">
+  <img class="mob-d" src="./assets/images/Group_27373_100x.jpg" alt="">
 </div>
 
-</div>
-<div class="blac-bar">
+  <div class="splide">
+    <div class="splide__track splide__track-2 ">
+      <ul class="splide__list">
+        <li class="splide__slide"> One bite = 3 orgasms</li>
 
-</div>
-<div class="work-section">
-    <div class="work-heading">
-        <div class="num-col phase-3">Phase 03</div>
-        <div class="work-heading-2">
-           <p>Lorem ipsum dolor sit amet consectetur adipisicing </p>
-        </div>
+        <li class="splide__slide"><img src="./assets/images/marq-2.png" alt=""></li>
+        <li class="splide__slide">She can’t stop shaking</li>
+
+        <li class="splide__slide"><img src="./assets/images/marq-3.png" alt=""></li>
+        <li class="splide__slide">Pre-cum in seconds</li>
+
+        <li class="splide__slide"><img src="./assets/images/marq-1.png" alt=""></li>
+      </ul>
     </div>
-</div>
-<div class="services-section">
-<div class="bar-services">
-    <div class="marquee-section-work">
-        <div class="marquee-work">
-<div class="marque-content-work">
-    <div class="arrow-marque">
-        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADgAAAAnCAYAAABaBotQAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAFXSURBVHgB7ZjhTcNADIXfIQZghIwAEwAbtBMAE9ANmg3aEdgANsgIYYOECdINjK0cEipxQKJp5Zd+kpWkVX588eXl7oATICIPWo1Wp7UBEyp0JT+ptQowkAW7AcmGSXLhSNpvd2DAupW7NsQaDGTJml3S3smtI/lq/4MBFSkdyYYpfFYjktdgwETED58VGJBzwhJN78RPWKrp3SwSdmx6twADcwqfP0umr5v0UOB/FDgeNn1b5+M+b1pPKaWdXaRsXYKLVuteJVsT7DD8JKLzroI3F3YCPlqtpZ1YB617FrO3mI4PHJ5nDI88a9jShiciIv36sXJS9EUirx9/+USUiIwwL6Ok3yjm3IWz77TTtUaiT7RVYOPI1dHDZDQpERmZaVJamDwiMuInpQnH3jKUmSZlJcRJuUVkhDkpDadzkyTlJU7Dbu+6Rb+G41h85yFafQuTAhPxCaJb6A45fkmHAAAAAElFTkSuQmCC" alt="">
+  </div>
+  <div class="heading-review-main">Not Just Reviews… <br> These Are Afterglows.</div>
+  <div class="review-section-container">
+    <div class="width-container" id="cardTrack">
+      <div class="card-review">
+        <div class="star"><img src="./assets/images/Frame 42.svg" alt=""></div>
+        <div class="heading-name">Fatima R</div>
+        <div class="client-name">CLIENT</div>
+        <p>We've been married for over 15 years, and lately, things have just felt a bit… routine. I saw an ad for this and thought, why not? We had a quiet evening at home and shared a box of the Dark Desire. It felt like we were back on our first dates, talking and connecting in a way we haven't in years. Thank you for helping us find our spark again.</p>
+      </div>
+      <div class="card-review">
+        <div class="star"><img src="./assets/images/Frame 42.svg" alt=""></div>
+        <div class="heading-name">Ahmed S.</div>
+        <div class="client-name">CLIENT</div>
+        <p>To be honest, I'm not a big chocolate guy, but my wife insisted we try this. I'm glad she did. We had the Dark Desire. It slowed us down, made us focus on each other, and led to a truly romantic night. Highly recommend it to any couple looking to add a little something extra to their intimate routine</p>
+      </div>
+      <div class="card-review">
+        <div class="star"><img src="./assets/images/Frame 42.svg" alt=""></div>
+        <div class="heading-name">Aisha J.</div>
+        <div class="client-name">CLIENT</div>
+        <p>I was skeptical at first, but after a friend recommended it, I ordered a box for my husband and me. The StrawBae is divine! We made it a point to share them after the kids were in bed. It's become our new little ritual, our 'us time.' This has been a game-changer for us.</p>
+      </div>
+      <div class="card-review">
+        <div class="star"><img src="./assets/images/Frame 42.svg" alt=""></div>
+        <div class="heading-name"> Zahra H</div>
+        <div class="client-name">CLIENT</div>
+        <p>My husband travels a lot for work, and it's always hard to get back into sync when he's home. I bought a box of the VanilLust chocolates to have waiting for him when he got back. It felt special and thoughtful, and it definitely set the mood for a beautiful evening. We’re already planning to make this a regular thing!</p>
+      </div>
     </div>
-   <p>  Web & App Development</p>
-   <div class="arrow-marque">
-    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADgAAAAnCAYAAABaBotQAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAFXSURBVHgB7ZjhTcNADIXfIQZghIwAEwAbtBMAE9ANmg3aEdgANsgIYYOECdINjK0cEipxQKJp5Zd+kpWkVX588eXl7oATICIPWo1Wp7UBEyp0JT+ptQowkAW7AcmGSXLhSNpvd2DAupW7NsQaDGTJml3S3smtI/lq/4MBFSkdyYYpfFYjktdgwETED58VGJBzwhJN78RPWKrp3SwSdmx6twADcwqfP0umr5v0UOB/FDgeNn1b5+M+b1pPKaWdXaRsXYKLVuteJVsT7DD8JKLzroI3F3YCPlqtpZ1YB617FrO3mI4PHJ5nDI88a9jShiciIv36sXJS9EUirx9/+USUiIwwL6Ok3yjm3IWz77TTtUaiT7RVYOPI1dHDZDQpERmZaVJamDwiMuInpQnH3jKUmSZlJcRJuUVkhDkpDadzkyTlJU7Dbu+6Rb+G41h85yFafQuTAhPxCaJb6A45fkmHAAAAAElFTkSuQmCC" alt="">
-</div>
-   <p>  Web & App Development</p>
- 
-   
-</div>
-<div class="marque-content-work">
-    <div class="arrow-marque">
-        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADgAAAAnCAYAAABaBotQAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAFXSURBVHgB7ZjhTcNADIXfIQZghIwAEwAbtBMAE9ANmg3aEdgANsgIYYOECdINjK0cEipxQKJp5Zd+kpWkVX588eXl7oATICIPWo1Wp7UBEyp0JT+ptQowkAW7AcmGSXLhSNpvd2DAupW7NsQaDGTJml3S3smtI/lq/4MBFSkdyYYpfFYjktdgwETED58VGJBzwhJN78RPWKrp3SwSdmx6twADcwqfP0umr5v0UOB/FDgeNn1b5+M+b1pPKaWdXaRsXYKLVuteJVsT7DD8JKLzroI3F3YCPlqtpZ1YB617FrO3mI4PHJ5nDI88a9jShiciIv36sXJS9EUirx9/+USUiIwwL6Ok3yjm3IWz77TTtUaiT7RVYOPI1dHDZDQpERmZaVJamDwiMuInpQnH3jKUmSZlJcRJuUVkhDkpDadzkyTlJU7Dbu+6Rb+G41h85yFafQuTAhPxCaJb6A45fkmHAAAAAElFTkSuQmCC" alt="">
+    <div class="pagination-btn">
+      <div class="right"><img src="./assets/images/left.png" alt=""></div>
+      <div class="left"><img src="./assets/images/right.png" alt=""></div>
     </div>
+  </div>
+  <div class="splide">
+    <div class="splide__track splide__track-3 ">
+      <ul class="splide__list">
+        <li class="splide__slide"> No side effects. Just side sluts.</li>
+
+        <li class="splide__slide"><img src="./assets/images/marq-2.png" alt=""></li>
+        <li class="splide__slide">Taste her addiction</li>
+
+        <li class="splide__slide"><img src="./assets/images/marq-3.png" alt=""></li>
+        <li class="splide__slide">Stay hard after the nut</li>
+
+        <li class="splide__slide"><img src="./assets/images/marq-1.png" alt=""></li>
+      </ul>
+    </div>
+  </div>
+<div class="horizontal-scroll-animation">
+  <div class="main-slide-horizontal">
+    <div class="text-bg"> F*cks like Cialis, but herbal</div>
+    <div class="element-horizontal">
+       
+          <div class="elements-h"><img src="./assets/images/el-1.png" alt=""></div>
+            <div class="elements-h"><img src="./assets/images/el-2.png" alt=""></div>
+              <div class="elements-h"><img src="./assets/images/el-3.png" alt=""></div>
+                <div class="elements-h"><img src="./assets/images/marq-1.png" alt=""></div>
+                 <div class="elements-h"><img src="./assets/images/marq-2.png" alt=""></div>
+                  <div class="elements-h"><img src="./assets/images/marq-3.png" alt=""></div>
+                 
+      
+
+      </div>
+    <div class="cchocolate-paralex">
+      
+    <div class="chocolate-horizontal ">
+           <img src="./assets/images/Vanillust Pack with Inner.png" alt="">
+         
+    </div>
+     <div class="chocolate-horizontal ">
+<img src="./assets/images/Dark Desire Pack with Inner.png" alt="">  
+    </div>
+     <div class="chocolate-horizontal ">
     
-    <p>  Web & App Development</p>
-    <div class="arrow-marque">
-        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADgAAAAnCAYAAABaBotQAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAFXSURBVHgB7ZjhTcNADIXfIQZghIwAEwAbtBMAE9ANmg3aEdgANsgIYYOECdINjK0cEipxQKJp5Zd+kpWkVX588eXl7oATICIPWo1Wp7UBEyp0JT+ptQowkAW7AcmGSXLhSNpvd2DAupW7NsQaDGTJml3S3smtI/lq/4MBFSkdyYYpfFYjktdgwETED58VGJBzwhJN78RPWKrp3SwSdmx6twADcwqfP0umr5v0UOB/FDgeNn1b5+M+b1pPKaWdXaRsXYKLVuteJVsT7DD8JKLzroI3F3YCPlqtpZ1YB617FrO3mI4PHJ5nDI88a9jShiciIv36sXJS9EUirx9/+USUiIwwL6Ok3yjm3IWz77TTtUaiT7RVYOPI1dHDZDQpERmZaVJamDwiMuInpQnH3jKUmSZlJcRJuUVkhDkpDadzkyTlJU7Dbu+6Rb+G41h85yFafQuTAhPxCaJb6A45fkmHAAAAAElFTkSuQmCC" alt="">
+         <img src="./assets/images/Strawbae Packs With Inner Mockups.png" alt="">
+  
     </div>
-    <p>  Web & App Development</p>
- </div>
+    </div>
+  </div>
+</div>
+  <div class="splide">
+    <div class="splide__track splide__track-2 ">
+      <ul class="splide__list">
+        <li class="splide__slide"> Melts panties — literally</li>
 
-        </div>
-    </div>
-    <div class="content-bar">
-        Web & App Development
-    </div>
-</div>
-<div class="bar-services">
-    <div class="marquee-section-work">
-        <div class="marquee-work">
-<div class="marque-content-work">
-    <div class="arrow-marque">
-        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADgAAAAnCAYAAABaBotQAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAFXSURBVHgB7ZjhTcNADIXfIQZghIwAEwAbtBMAE9ANmg3aEdgANsgIYYOECdINjK0cEipxQKJp5Zd+kpWkVX588eXl7oATICIPWo1Wp7UBEyp0JT+ptQowkAW7AcmGSXLhSNpvd2DAupW7NsQaDGTJml3S3smtI/lq/4MBFSkdyYYpfFYjktdgwETED58VGJBzwhJN78RPWKrp3SwSdmx6twADcwqfP0umr5v0UOB/FDgeNn1b5+M+b1pPKaWdXaRsXYKLVuteJVsT7DD8JKLzroI3F3YCPlqtpZ1YB617FrO3mI4PHJ5nDI88a9jShiciIv36sXJS9EUirx9/+USUiIwwL6Ok3yjm3IWz77TTtUaiT7RVYOPI1dHDZDQpERmZaVJamDwiMuInpQnH3jKUmSZlJcRJuUVkhDkpDadzkyTlJU7Dbu+6Rb+G41h85yFafQuTAhPxCaJb6A45fkmHAAAAAElFTkSuQmCC" alt="">
-    </div>
-   <p>  Design & Branding</p>
-   <div class="arrow-marque">
-    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADgAAAAnCAYAAABaBotQAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAFXSURBVHgB7ZjhTcNADIXfIQZghIwAEwAbtBMAE9ANmg3aEdgANsgIYYOECdINjK0cEipxQKJp5Zd+kpWkVX588eXl7oATICIPWo1Wp7UBEyp0JT+ptQowkAW7AcmGSXLhSNpvd2DAupW7NsQaDGTJml3S3smtI/lq/4MBFSkdyYYpfFYjktdgwETED58VGJBzwhJN78RPWKrp3SwSdmx6twADcwqfP0umr5v0UOB/FDgeNn1b5+M+b1pPKaWdXaRsXYKLVuteJVsT7DD8JKLzroI3F3YCPlqtpZ1YB617FrO3mI4PHJ5nDI88a9jShiciIv36sXJS9EUirx9/+USUiIwwL6Ok3yjm3IWz77TTtUaiT7RVYOPI1dHDZDQpERmZaVJamDwiMuInpQnH3jKUmSZlJcRJuUVkhDkpDadzkyTlJU7Dbu+6Rb+G41h85yFafQuTAhPxCaJb6A45fkmHAAAAAElFTkSuQmCC" alt="">
-</div>
-   <p>  Design & Branding</p>
- 
-   
-</div>
-<div class="marque-content-work">
-    <div class="arrow-marque">
-        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADgAAAAnCAYAAABaBotQAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAFXSURBVHgB7ZjhTcNADIXfIQZghIwAEwAbtBMAE9ANmg3aEdgANsgIYYOECdINjK0cEipxQKJp5Zd+kpWkVX588eXl7oATICIPWo1Wp7UBEyp0JT+ptQowkAW7AcmGSXLhSNpvd2DAupW7NsQaDGTJml3S3smtI/lq/4MBFSkdyYYpfFYjktdgwETED58VGJBzwhJN78RPWKrp3SwSdmx6twADcwqfP0umr5v0UOB/FDgeNn1b5+M+b1pPKaWdXaRsXYKLVuteJVsT7DD8JKLzroI3F3YCPlqtpZ1YB617FrO3mI4PHJ5nDI88a9jShiciIv36sXJS9EUirx9/+USUiIwwL6Ok3yjm3IWz77TTtUaiT7RVYOPI1dHDZDQpERmZaVJamDwiMuInpQnH3jKUmSZlJcRJuUVkhDkpDadzkyTlJU7Dbu+6Rb+G41h85yFafQuTAhPxCaJb6A45fkmHAAAAAElFTkSuQmCC" alt="">
-    </div>
-    
-    <p>  Design & Branding</p>
-    <div class="arrow-marque">
-        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADgAAAAnCAYAAABaBotQAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAFXSURBVHgB7ZjhTcNADIXfIQZghIwAEwAbtBMAE9ANmg3aEdgANsgIYYOECdINjK0cEipxQKJp5Zd+kpWkVX588eXl7oATICIPWo1Wp7UBEyp0JT+ptQowkAW7AcmGSXLhSNpvd2DAupW7NsQaDGTJml3S3smtI/lq/4MBFSkdyYYpfFYjktdgwETED58VGJBzwhJN78RPWKrp3SwSdmx6twADcwqfP0umr5v0UOB/FDgeNn1b5+M+b1pPKaWdXaRsXYKLVuteJVsT7DD8JKLzroI3F3YCPlqtpZ1YB617FrO3mI4PHJ5nDI88a9jShiciIv36sXJS9EUirx9/+USUiIwwL6Ok3yjm3IWz77TTtUaiT7RVYOPI1dHDZDQpERmZaVJamDwiMuInpQnH3jKUmSZlJcRJuUVkhDkpDadzkyTlJU7Dbu+6Rb+G41h85yFafQuTAhPxCaJb6A45fkmHAAAAAElFTkSuQmCC" alt="">
-    </div>
-    <p>  Design & Branding</p>
- </div>
+        <li class="splide__slide"><img src="./assets/images/marq-2.png" alt=""></li>
+        <li class="splide__slide"> 2nd round? Still rock</li>
 
-        </div>
-    </div>
-    <div class="content-bar">
-        Design & Branding
-    </div>
-</div>
-<div class="bar-services">
-    <div class="marquee-section-work">
-        <div class="marquee-work">
-<div class="marque-content-work">
-    <div class="arrow-marque">
-        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADgAAAAnCAYAAABaBotQAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAFXSURBVHgB7ZjhTcNADIXfIQZghIwAEwAbtBMAE9ANmg3aEdgANsgIYYOECdINjK0cEipxQKJp5Zd+kpWkVX588eXl7oATICIPWo1Wp7UBEyp0JT+ptQowkAW7AcmGSXLhSNpvd2DAupW7NsQaDGTJml3S3smtI/lq/4MBFSkdyYYpfFYjktdgwETED58VGJBzwhJN78RPWKrp3SwSdmx6twADcwqfP0umr5v0UOB/FDgeNn1b5+M+b1pPKaWdXaRsXYKLVuteJVsT7DD8JKLzroI3F3YCPlqtpZ1YB617FrO3mI4PHJ5nDI88a9jShiciIv36sXJS9EUirx9/+USUiIwwL6Ok3yjm3IWz77TTtUaiT7RVYOPI1dHDZDQpERmZaVJamDwiMuInpQnH3jKUmSZlJcRJuUVkhDkpDadzkyTlJU7Dbu+6Rb+G41h85yFafQuTAhPxCaJb6A45fkmHAAAAAElFTkSuQmCC" alt="">
-    </div>
-   <p>3D Interactive Web</p>
-   <div class="arrow-marque">
-    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADgAAAAnCAYAAABaBotQAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAFXSURBVHgB7ZjhTcNADIXfIQZghIwAEwAbtBMAE9ANmg3aEdgANsgIYYOECdINjK0cEipxQKJp5Zd+kpWkVX588eXl7oATICIPWo1Wp7UBEyp0JT+ptQowkAW7AcmGSXLhSNpvd2DAupW7NsQaDGTJml3S3smtI/lq/4MBFSkdyYYpfFYjktdgwETED58VGJBzwhJN78RPWKrp3SwSdmx6twADcwqfP0umr5v0UOB/FDgeNn1b5+M+b1pPKaWdXaRsXYKLVuteJVsT7DD8JKLzroI3F3YCPlqtpZ1YB617FrO3mI4PHJ5nDI88a9jShiciIv36sXJS9EUirx9/+USUiIwwL6Ok3yjm3IWz77TTtUaiT7RVYOPI1dHDZDQpERmZaVJamDwiMuInpQnH3jKUmSZlJcRJuUVkhDkpDadzkyTlJU7Dbu+6Rb+G41h85yFafQuTAhPxCaJb6A45fkmHAAAAAElFTkSuQmCC" alt="">
-</div>
-   <p>3D Interactive Web</p>
- 
-   
-</div>
-<div class="marque-content-work">
-    <div class="arrow-marque">
-        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADgAAAAnCAYAAABaBotQAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAFXSURBVHgB7ZjhTcNADIXfIQZghIwAEwAbtBMAE9ANmg3aEdgANsgIYYOECdINjK0cEipxQKJp5Zd+kpWkVX588eXl7oATICIPWo1Wp7UBEyp0JT+ptQowkAW7AcmGSXLhSNpvd2DAupW7NsQaDGTJml3S3smtI/lq/4MBFSkdyYYpfFYjktdgwETED58VGJBzwhJN78RPWKrp3SwSdmx6twADcwqfP0umr5v0UOB/FDgeNn1b5+M+b1pPKaWdXaRsXYKLVuteJVsT7DD8JKLzroI3F3YCPlqtpZ1YB617FrO3mI4PHJ5nDI88a9jShiciIv36sXJS9EUirx9/+USUiIwwL6Ok3yjm3IWz77TTtUaiT7RVYOPI1dHDZDQpERmZaVJamDwiMuInpQnH3jKUmSZlJcRJuUVkhDkpDadzkyTlJU7Dbu+6Rb+G41h85yFafQuTAhPxCaJb6A45fkmHAAAAAElFTkSuQmCC" alt="">
-    </div>
-    
-    <p>3D Interactive Web</p>
-    <div class="arrow-marque">
-        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADgAAAAnCAYAAABaBotQAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAFXSURBVHgB7ZjhTcNADIXfIQZghIwAEwAbtBMAE9ANmg3aEdgANsgIYYOECdINjK0cEipxQKJp5Zd+kpWkVX588eXl7oATICIPWo1Wp7UBEyp0JT+ptQowkAW7AcmGSXLhSNpvd2DAupW7NsQaDGTJml3S3smtI/lq/4MBFSkdyYYpfFYjktdgwETED58VGJBzwhJN78RPWKrp3SwSdmx6twADcwqfP0umr5v0UOB/FDgeNn1b5+M+b1pPKaWdXaRsXYKLVuteJVsT7DD8JKLzroI3F3YCPlqtpZ1YB617FrO3mI4PHJ5nDI88a9jShiciIv36sXJS9EUirx9/+USUiIwwL6Ok3yjm3IWz77TTtUaiT7RVYOPI1dHDZDQpERmZaVJamDwiMuInpQnH3jKUmSZlJcRJuUVkhDkpDadzkyTlJU7Dbu+6Rb+G41h85yFafQuTAhPxCaJb6A45fkmHAAAAAElFTkSuQmCC" alt="">
-    </div>
-    <p>3D Interactive Web</p>
- </div>
+        <li class="splide__slide"><img src="./assets/images/marq-3.png" alt=""></li>
+        <li class="splide__slide">Her soul left her body</li>
 
-        </div>
+        <li class="splide__slide"><img src="./assets/images/marq-1.png" alt=""></li>
+      </ul>
     </div>
-    <div class="content-bar">
-        3D Interactive Web
-    </div>
-</div>
-<div class="bar-services">
-    <div class="marquee-section-work">
-        <div class="marquee-work">
-<div class="marque-content-work">
-    <div class="arrow-marque">
-        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADgAAAAnCAYAAABaBotQAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAFXSURBVHgB7ZjhTcNADIXfIQZghIwAEwAbtBMAE9ANmg3aEdgANsgIYYOECdINjK0cEipxQKJp5Zd+kpWkVX588eXl7oATICIPWo1Wp7UBEyp0JT+ptQowkAW7AcmGSXLhSNpvd2DAupW7NsQaDGTJml3S3smtI/lq/4MBFSkdyYYpfFYjktdgwETED58VGJBzwhJN78RPWKrp3SwSdmx6twADcwqfP0umr5v0UOB/FDgeNn1b5+M+b1pPKaWdXaRsXYKLVuteJVsT7DD8JKLzroI3F3YCPlqtpZ1YB617FrO3mI4PHJ5nDI88a9jShiciIv36sXJS9EUirx9/+USUiIwwL6Ok3yjm3IWz77TTtUaiT7RVYOPI1dHDZDQpERmZaVJamDwiMuInpQnH3jKUmSZlJcRJuUVkhDkpDadzkyTlJU7Dbu+6Rb+G41h85yFafQuTAhPxCaJb6A45fkmHAAAAAElFTkSuQmCC" alt="">
-    </div>
-   <p> Project Management</p>
-   <div class="arrow-marque">
-    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADgAAAAnCAYAAABaBotQAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAFXSURBVHgB7ZjhTcNADIXfIQZghIwAEwAbtBMAE9ANmg3aEdgANsgIYYOECdINjK0cEipxQKJp5Zd+kpWkVX588eXl7oATICIPWo1Wp7UBEyp0JT+ptQowkAW7AcmGSXLhSNpvd2DAupW7NsQaDGTJml3S3smtI/lq/4MBFSkdyYYpfFYjktdgwETED58VGJBzwhJN78RPWKrp3SwSdmx6twADcwqfP0umr5v0UOB/FDgeNn1b5+M+b1pPKaWdXaRsXYKLVuteJVsT7DD8JKLzroI3F3YCPlqtpZ1YB617FrO3mI4PHJ5nDI88a9jShiciIv36sXJS9EUirx9/+USUiIwwL6Ok3yjm3IWz77TTtUaiT7RVYOPI1dHDZDQpERmZaVJamDwiMuInpQnH3jKUmSZlJcRJuUVkhDkpDadzkyTlJU7Dbu+6Rb+G41h85yFafQuTAhPxCaJb6A45fkmHAAAAAElFTkSuQmCC" alt="">
-</div>
-   <p> Project Management</p>
- 
-   
-</div>
-<div class="marque-content-work">
-    <div class="arrow-marque">
-        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADgAAAAnCAYAAABaBotQAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAFXSURBVHgB7ZjhTcNADIXfIQZghIwAEwAbtBMAE9ANmg3aEdgANsgIYYOECdINjK0cEipxQKJp5Zd+kpWkVX588eXl7oATICIPWo1Wp7UBEyp0JT+ptQowkAW7AcmGSXLhSNpvd2DAupW7NsQaDGTJml3S3smtI/lq/4MBFSkdyYYpfFYjktdgwETED58VGJBzwhJN78RPWKrp3SwSdmx6twADcwqfP0umr5v0UOB/FDgeNn1b5+M+b1pPKaWdXaRsXYKLVuteJVsT7DD8JKLzroI3F3YCPlqtpZ1YB617FrO3mI4PHJ5nDI88a9jShiciIv36sXJS9EUirx9/+USUiIwwL6Ok3yjm3IWz77TTtUaiT7RVYOPI1dHDZDQpERmZaVJamDwiMuInpQnH3jKUmSZlJcRJuUVkhDkpDadzkyTlJU7Dbu+6Rb+G41h85yFafQuTAhPxCaJb6A45fkmHAAAAAElFTkSuQmCC" alt="">
-    </div>
-    
-    <p> Project Management</p>
-    <div class="arrow-marque">
-        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADgAAAAnCAYAAABaBotQAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAFXSURBVHgB7ZjhTcNADIXfIQZghIwAEwAbtBMAE9ANmg3aEdgANsgIYYOECdINjK0cEipxQKJp5Zd+kpWkVX588eXl7oATICIPWo1Wp7UBEyp0JT+ptQowkAW7AcmGSXLhSNpvd2DAupW7NsQaDGTJml3S3smtI/lq/4MBFSkdyYYpfFYjktdgwETED58VGJBzwhJN78RPWKrp3SwSdmx6twADcwqfP0umr5v0UOB/FDgeNn1b5+M+b1pPKaWdXaRsXYKLVuteJVsT7DD8JKLzroI3F3YCPlqtpZ1YB617FrO3mI4PHJ5nDI88a9jShiciIv36sXJS9EUirx9/+USUiIwwL6Ok3yjm3IWz77TTtUaiT7RVYOPI1dHDZDQpERmZaVJamDwiMuInpQnH3jKUmSZlJcRJuUVkhDkpDadzkyTlJU7Dbu+6Rb+G41h85yFafQuTAhPxCaJb6A45fkmHAAAAAElFTkSuQmCC" alt="">
-    </div>
-    <p> Project Management</p>
- </div>
+  </div>
+  <div class="faqs-section-container">
+    <div class="faq-headings">
+      🍫 Frequently Asked Questions (FAQs)
 
-        </div>
     </div>
-    <div class="content-bar">
-        Project Management
-    </div>
-</div>
-<div class="bar-services">
-    <div class="marquee-section-work">
-        <div class="marquee-work">
-<div class="marque-content-work">
-    <div class="arrow-marque">
-        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADgAAAAnCAYAAABaBotQAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAFXSURBVHgB7ZjhTcNADIXfIQZghIwAEwAbtBMAE9ANmg3aEdgANsgIYYOECdINjK0cEipxQKJp5Zd+kpWkVX588eXl7oATICIPWo1Wp7UBEyp0JT+ptQowkAW7AcmGSXLhSNpvd2DAupW7NsQaDGTJml3S3smtI/lq/4MBFSkdyYYpfFYjktdgwETED58VGJBzwhJN78RPWKrp3SwSdmx6twADcwqfP0umr5v0UOB/FDgeNn1b5+M+b1pPKaWdXaRsXYKLVuteJVsT7DD8JKLzroI3F3YCPlqtpZ1YB617FrO3mI4PHJ5nDI88a9jShiciIv36sXJS9EUirx9/+USUiIwwL6Ok3yjm3IWz77TTtUaiT7RVYOPI1dHDZDQpERmZaVJamDwiMuInpQnH3jKUmSZlJcRJuUVkhDkpDadzkyTlJU7Dbu+6Rb+G41h85yFafQuTAhPxCaJb6A45fkmHAAAAAElFTkSuQmCC" alt="">
-    </div>
-   <p>Digital Solutions</p>
-   <div class="arrow-marque">
-    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADgAAAAnCAYAAABaBotQAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAFXSURBVHgB7ZjhTcNADIXfIQZghIwAEwAbtBMAE9ANmg3aEdgANsgIYYOECdINjK0cEipxQKJp5Zd+kpWkVX588eXl7oATICIPWo1Wp7UBEyp0JT+ptQowkAW7AcmGSXLhSNpvd2DAupW7NsQaDGTJml3S3smtI/lq/4MBFSkdyYYpfFYjktdgwETED58VGJBzwhJN78RPWKrp3SwSdmx6twADcwqfP0umr5v0UOB/FDgeNn1b5+M+b1pPKaWdXaRsXYKLVuteJVsT7DD8JKLzroI3F3YCPlqtpZ1YB617FrO3mI4PHJ5nDI88a9jShiciIv36sXJS9EUirx9/+USUiIwwL6Ok3yjm3IWz77TTtUaiT7RVYOPI1dHDZDQpERmZaVJamDwiMuInpQnH3jKUmSZlJcRJuUVkhDkpDadzkyTlJU7Dbu+6Rb+G41h85yFafQuTAhPxCaJb6A45fkmHAAAAAElFTkSuQmCC" alt="">
-</div>
-   <p>Digital Solutions</p>
- 
-   
-</div>
-<div class="marque-content-work">
-    <div class="arrow-marque">
-        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADgAAAAnCAYAAABaBotQAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAFXSURBVHgB7ZjhTcNADIXfIQZghIwAEwAbtBMAE9ANmg3aEdgANsgIYYOECdINjK0cEipxQKJp5Zd+kpWkVX588eXl7oATICIPWo1Wp7UBEyp0JT+ptQowkAW7AcmGSXLhSNpvd2DAupW7NsQaDGTJml3S3smtI/lq/4MBFSkdyYYpfFYjktdgwETED58VGJBzwhJN78RPWKrp3SwSdmx6twADcwqfP0umr5v0UOB/FDgeNn1b5+M+b1pPKaWdXaRsXYKLVuteJVsT7DD8JKLzroI3F3YCPlqtpZ1YB617FrO3mI4PHJ5nDI88a9jShiciIv36sXJS9EUirx9/+USUiIwwL6Ok3yjm3IWz77TTtUaiT7RVYOPI1dHDZDQpERmZaVJamDwiMuInpQnH3jKUmSZlJcRJuUVkhDkpDadzkyTlJU7Dbu+6Rb+G41h85yFafQuTAhPxCaJb6A45fkmHAAAAAElFTkSuQmCC" alt="">
-    </div>
-    
-    <p>Digital Solutions</p>
-    <div class="arrow-marque">
-        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADgAAAAnCAYAAABaBotQAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAFXSURBVHgB7ZjhTcNADIXfIQZghIwAEwAbtBMAE9ANmg3aEdgANsgIYYOECdINjK0cEipxQKJp5Zd+kpWkVX588eXl7oATICIPWo1Wp7UBEyp0JT+ptQowkAW7AcmGSXLhSNpvd2DAupW7NsQaDGTJml3S3smtI/lq/4MBFSkdyYYpfFYjktdgwETED58VGJBzwhJN78RPWKrp3SwSdmx6twADcwqfP0umr5v0UOB/FDgeNn1b5+M+b1pPKaWdXaRsXYKLVuteJVsT7DD8JKLzroI3F3YCPlqtpZ1YB617FrO3mI4PHJ5nDI88a9jShiciIv36sXJS9EUirx9/+USUiIwwL6Ok3yjm3IWz77TTtUaiT7RVYOPI1dHDZDQpERmZaVJamDwiMuInpQnH3jKUmSZlJcRJuUVkhDkpDadzkyTlJU7Dbu+6Rb+G41h85yFafQuTAhPxCaJb6A45fkmHAAAAAElFTkSuQmCC" alt="">
-    </div>
-    <p>Digital Solutions</p>
- </div>
+    <div class="faq-toggle-container">
 
+
+      <div class="faq">
+        <div class="bar-f">
+          <h1>When should we take JWW Chocolates?</h1>
+          <div class="toggle-btn-faq"><img src="./assets/images/x-vector.svg" alt=""></div>
         </div>
+        <div class="faq-content">
+          <p>Right before things get hot. 🔥
+            Take 1 piece each (Him & Her) about 30–45 minutes before intimacy — preferably on a light stomach, no heavy
+            food or alcohol. Whether it’s a planned night of passion or a spontaneous session, this is your pre-game
+            ritual for unforgettable sex.</p>
+        </div>
+      </div>
+      <div class="faq">
+        <div class="bar-f">
+          <h1>Is this safe for regular use?</h1>
+          <div class="toggle-btn-faq"><img src="./assets/images/x-vector.svg" alt=""></div>
+        </div>
+        <div class="faq-content">
+          <p>Yes. We use only 100% natural and herbal ingredients, without any artificial stimulants, hormones, or
+            chemicals. Safe for both men and women — no side effects, no crash.</p>
+        </div>
+      </div>
+      <div class="faq">
+        <div class="bar-f">
+          <h1>How long before it starts working?</h1>
+          <div class="toggle-btn-faq"><img src="./assets/images/x-vector.svg" alt=""></div>
+        </div>
+        <div class="faq-content">
+          <p>Usually within 30 to 45 minutes after taking it on a light stomach. Effects can last for several hours —
+            and some say the afterglow lasts even longer. 😉</p>
+        </div>
+      </div>
+      <div class="faq">
+        <div class="bar-f">
+          <h1>Will it work for both partners?</h1>
+          <div class="toggle-btn-faq"><img src="./assets/images/x-vector.svg" alt=""></div>
+        </div>
+        <div class="faq-content">
+          <p>Yes — we’ve created Hubby & Wifey tabs, tailored specifically to the male and female body. The ingredients
+            are chosen to enhance blood flow, arousal, lubrication, stamina, satisfaction and many things for both.</p>
+        </div>
+      </div>
+      <div class="faq">
+        <div class="bar-f">
+          <h1>What makes it better than vaigra or supplements?</h1>
+          <div class="toggle-btn-faq"><img src="./assets/images/x-vector.svg" alt=""></div>
+        </div>
+        <div class="faq-content">
+          <p>1. Faster & Stronger Than Viagra**
+            ✅ Onset in 30-60mins
+
+            2. Zero Side Effects
+            ❌ No headaches, blue vision, or heart strain (Viagra blocks PDE5 unnaturally)
+            ❌ No dependency(adaptogens protect receptors) </p>
+        </div>
+      </div>
+      <div class="faq">
+        <div class="bar-f">
+          <h1>Does it taste like herbs or medicine?</h1>
+          <div class="toggle-btn-faq"><img src="./assets/images/x-vector.svg" alt=""></div>
+        </div>
+        <div class="faq-content">
+          <p>Not at all. We use premium chocolate — dark, white, and strawberry . You’ll never taste the herbs… just
+            pleasure. 🍫 </p>
+        </div>
+      </div>
+
+      <div class="faq">
+        <div class="bar-f">
+          <h1>Who should not take JWW chocolates?</h1>
+          <div class="toggle-btn-faq"><img src="./assets/images/x-vector.svg" alt=""></div>
+        </div>
+        <div class="faq-content">
+          <p>JWW chocolates is not intended for use by singles (who are not legally married) and children under the age
+            of 18. If you are pregnant, nursing, taking any medication, or have any medical condition, consult your
+            doctor before use.</p>
+        </div>
+      </div>
+
     </div>
-    <div class="content-bar">
-Digital Solutions
+  </div>
+  <div class="splide">
+    <div class="splide__track splide__track-3 ">
+      <ul class="splide__list">
+        <li class="splide__slide">So strong, it’s sinful</li>
+
+        <li class="splide__slide"><img src="./assets/images/marq-2.png" alt=""></li>
+        <li class="splide__slide"> For couples who can’t behave</li>
+
+        <li class="splide__slide"><img src="./assets/images/marq-3.png" alt=""></li>
+        <li class="splide__slide"> Stay hard after the nut</li>
+
+        <li class="splide__slide"><img src="./assets/images/marq-1.png" alt=""></li>
+      </ul>
     </div>
+  </div>
+  <footer>
+    <div class="section-main-footer">
+      <div class="side-left-logo">
+        <div class="logo-footer">
+          <img src="./assets/images/footer-logo.png" alt="">
+        </div>
+        <div class="para-footer">
+          Pakistan's 1st Premium Herbal Seggs Chocolate Brand 🍫 Herbal, Fast & Intense: Made for unstoppable cravings
+          💦
+        </div>
+        <div class="cta-footer">
+          <div class="cta">Get dirty now</div>
+        </div>
+      </div>
+    <div class="menu-links-footer">
+  <ul>
+    <li>
+      <h1>LINKS</h1>
+    </li>
+    <li><a href="./index.html">HOME</a></li>
+    <li><a href="./About.html">ABOUT</a></li>
+    <li><a href="./contact.html">CONTACT</a></li>
+  </ul>
+
+  <ul>
+    <li>
+      <h1>SOCIAL MEDIA</h1>
+    </li>
+    <li><a href="https://www.instagram.com/jabweweds/" target="_blank">INSTAGRAM</a></li>
+    <li><a href="https://www.facebook.com/share/1BHEh4A6wU/" target="_blank">FACEBOOK</a></li>
+    <li><a href="https://x.com/JabWeWeds?t=Icz5FqbLT_86aVEqnzplqQ&s=09" target="_blank">X</a></li>
+    <li><a href="https://wa.me/923074250312" target="_blank">WHATSAPP</a></li>
+  </ul>
 </div>
-</div>
-<div class="brands-logo-section">
-<div class="text-logo">
-    <p>Brands we have <br> worked with</p>
-</div>
-<div class="logo-brand">
-    <img src="/assets/logo-zu-lEby5.png" alt="">
-</div>
-<div class="logo-brand">
-    <img src="/assets/logo-zu-lEby5.png" alt="">
-</div>
-<div class="logo-brand">
-    <img src="/assets/logo-zu-lEby5.png" alt="">
-</div>
-<div class="logo-brand">
-    <img src="/assets/logo-zu-lEby5.png" alt="">
-</div>
-<div class="logo-brand">
-    <img src="/assets/logo-zu-lEby5.png" alt="">
-</div>
-<div class="logo-brand">
-    <img src="/assets/logo-zu-lEby5.png" alt="">
-</div>
-</div>
-<div class="say-hello-section">
-    
-    <div class="say-hello-content">
-        <h3><div class="say">SAY</div><div class="video-hover">
-           <img src="/assets/0777ec19cd310cba60a9da4c64692070-D36MKAKd.gif" alt="">
-        </div> <div class="hello">HELLO</div></h3>
-        <p>Get in touch</p>
+
     </div>
-    <div class="time-section">
-        <div class="time" id="pakistan-time">
-            <h5>Pakistan</h5>
-            <p></p>
-        </div>
-        <div class="time" id="africa-time">
-            <h5>Africa</h5>
-            <p></p>
-        </div>
-        <div class="time" id="usa-time">
-            <h5>USA</h5>
-            <p></p>
-        </div>
-        <div class="time" id="qatar-time">
-            <h5>Qatar</h5>
-            <p></p>
-        </div>
+    <div class="privacy-policy">
+      <p>all right reserved jabweweds</p>
     </div>
-</div>
-<footer id="footer">
-    <img class="f-bg" src="/assets/12a93cc7c92f1e805845265feb44185e-C2LuMZjw.gif" alt="">
-    <div class="grid-container">
-        <div class="codenart">
-            CODE&ART
-        </div>
-        <div class="content-footer">
-           Quo molestiae incidunt cum repellendus dolorem. Voluptatum cumque neque voluptates eaque molestiae mollitia unde, eum, animi ad quaerat ut nisi. Nostrum, eum?
-        </div>
-    <a class="email" href="Codenart@gmail.com">Code&art@gmail.com</a>
+    <div class="splide">
+      <div class="splide__track splide__track-1  ">
+        <ul class="splide__list ">
+          <li class="splide__slide slide-footer">Better than lube</li>
+
+          <li class="splide__slide"><img src="./assets/images/marq-2.png" alt=""></li>
+          <li class="splide__slide  slide-footer">Pre-cum in seconds</li>
+
+          <li class="splide__slide"><img src="./assets/images/marq-3.png" alt=""></li>
+          <li class="splide__slide  slide-footer">4+hrs of pounding</li>
+
+          <li class="splide__slide"><img src="./assets/images/marq-1.png" alt=""></li>
+        </ul>
+      </div>
     </div>
-</footer>
-</body>
+  </footer>
+</body>
+<script type="module" src="./js/index.js"></script>
+<script>
+  const productPageLinks = document.querySelectorAll("#product-page");
+
+  productPageLinks.forEach(element => {
+    element.style.cursor = "pointer"; // make it clickable
+    element.addEventListener("click", () => {
+      window.location.href = "./product-page.html";
+    });
+  });
+</script>
+<script type="module" src="./js/cart-manager.js"></script>
+
 </html>
