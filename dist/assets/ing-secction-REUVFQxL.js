@@ -1,0 +1,1 @@
+import{g as e}from"./marquee-D89pML2L.js";window.addEventListener("load",()=>{e.to(".circle-ing img",{rotate:360,duration:20,ease:"none",repeat:-1}),e.to(".circle-rotate",{rotation:360,duration:10,ease:"linear",repeat:-1})});
